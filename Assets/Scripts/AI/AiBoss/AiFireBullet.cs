@@ -8,10 +8,16 @@ public class AiFireBullet : MonoBehaviour
     [SerializeField] float lifeTime = 2f;
     public float speed;
     [SerializeField] Rigidbody2D rb2d;
+
     private void Awake()
     {
         rb2d = GetComponent<Rigidbody2D>();
     }
+    private void OnEnable()
+    {
+        Invoke("Die", lifeTime);
+    }
+
     void Start()
     {
 
@@ -25,14 +31,17 @@ public class AiFireBullet : MonoBehaviour
         rb2d.velocity = new Vector2(moveDirection.x, moveDirection.y);
         /*gameObject.SetActive(false);*/
     }
-    private void OnEnable()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Invoke("Die", lifeTime);
+        if (other.gameObject.layer == 7)
+        {
+            gameObject.SetActive(false);
+        }
     }
-
-    void Die()
+        void Die()
     {
         CancelInvoke();
         gameObject.SetActive(false);
     }
+    
 }
