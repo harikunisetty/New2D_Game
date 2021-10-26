@@ -7,14 +7,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator anim;
     [SerializeField] float speed = 500f;
-    [SerializeField] float runSpeed = 2f;
     private bool facingRight = true;
     private float xInput;
     public bool isGrounded;
 
     [Header("PlayerHealth")]
     [SerializeField] HealthManagaer PlayerHealth;
-    [SerializeField] float Hitvalue = 10f;
+    [SerializeField] float Hitvalue = 40f;
 
     void Start()
     {
@@ -23,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         PlayerHealth = GetComponent<HealthManagaer>();
     }
-    // Update is called once per frame
     void Update()
     {
         xInput = Input.GetAxis("Horizontal") * speed;
@@ -80,16 +78,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collider2D.gameObject.CompareTag("Coin"))
         {
-           Destroy(collider2D.gameObject);
+            Destroy(collider2D.gameObject);
             GameManager.Instance.UpdateCoins();
         }
-       
+        if (collider2D.gameObject.CompareTag("AiBullet"))
+        {
+            PlayerHealth.PlayerDamage(5f);
+        }
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            PlayerHealth.PlayerDamage(40f);
-        }
+            PlayerHealth.PlayerDamage(Hitvalue);
+        }  
     }
 }

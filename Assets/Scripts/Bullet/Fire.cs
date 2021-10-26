@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fire : MonoBehaviour
 {
     [SerializeField] float lifetime = 3f;
+    [SerializeField] GameObject Effect;
   
 
     private void OnEnable()
@@ -29,10 +30,10 @@ public class Fire : MonoBehaviour
             Debug.Log("Touch Enemy");
         }
 
-        /*if (other.CompareTag("Kill"))
+        if (other.CompareTag("AIBossEnemy"))
         {
-            Destroy(other.gameObject);
-           *//* GameManager.Instance.UpdateKillCount();*//*
-        }*/
+            gameObject.SetActive(false);
+            Instantiate(Effect, transform.position, Quaternion.identity);
+        }
     }
 }

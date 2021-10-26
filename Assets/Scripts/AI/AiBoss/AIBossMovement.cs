@@ -15,38 +15,37 @@ public class AIBossMovement : MonoBehaviour
     public GameObject bullet;
     public GameObject bulletParent;
     [SerializeField] float ShootRange;
-    [SerializeField] float fireRate;
+    [SerializeField] float startAttackTime;
     [SerializeField] float nextAtacckTime;
+    [SerializeField] float restTime;
+
 
     [SerializeField] EnemyDamageHealth enemyHealth;
-    [SerializeField] float Hitvalue = 10f;
+    [SerializeField] float Hitvalue = 5f;
 
     [SerializeField] GameObject pickEffect;
+    Animator anim;
+
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemyHealth = GetComponent<EnemyDamageHealth>();
-
+        nextAtacckTime = startAttackTime;
+        anim = GetComponent<Animator>();
     }
     private void Update()
     {
         distanceFormPlayer = Vector2.Distance(Player.position, transform.position);
-        if (distanceFormPlayer < Offset)
-        {
-            if (distanceFormPlayer > ShootRange)
-            {
-                transform.position = Vector2.MoveTowards(this.transform.position, Player.position, xSpeed);
-            }
-            else if (distanceFormPlayer <= ShootRange)
-            {
-                if (nextAtacckTime < Time.deltaTime)
-                {
-                    Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
-                    nextAtacckTime = Time.deltaTime ;
-                }
 
+        if (distanceFormPlayer <= ShootRange)
+            {
+                nextAtacckTime -= Time.deltaTime;
+                if (nextAtacckTime <= 0)
+                {
+                    nextAtacckTime = restTime;
+                    Instantiate(bullet, bulletParent.transform.position, Quaternion.identity);
+                }
             }
-        }
     }
     private void OnDrawGizmos()
     {
@@ -55,16 +54,11 @@ public class AIBossMovement : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, ShootRange);
     }
     private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            enemyHealth.AiDamage(10f);
-        }
-
+    {     
         if (other.gameObject.CompareTag("Bullet"))
         {
            /* Instantiate(pickEffect, transform.position, Quaternion.identity);*/
-            enemyHealth.AiDamage(10f);
+            enemyHealth.AiDamage(Hitvalue);
         }
     }
 }

@@ -5,13 +5,8 @@ using UnityEngine;
 public class AmmoPostion : MonoBehaviour
 {
     [Header("Fire")]
-    [SerializeField] float attackIntervals = 0.5f;
-    [SerializeField] float nextAttack;
-    [SerializeField] float timer = 0;
     [SerializeField] float speed = 20f;
     [SerializeField] Transform fireTrans;
-    [SerializeField] GameObject Ammo;
-    [SerializeField] bool moveRight;
     void Start()
     {
         

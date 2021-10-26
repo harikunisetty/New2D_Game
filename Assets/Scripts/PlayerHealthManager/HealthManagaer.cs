@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthManagaer : MonoBehaviour
 {
-    [Header("AIHealth")]
+    [Header("PlayerHealth")]
 
     [SerializeField] float AIHealth;
     private float maximumAiHealth = 100f;
@@ -21,15 +21,15 @@ public class HealthManagaer : MonoBehaviour
             UiManager.Instance.PlayerHealthUI(AIHealth);
 
             if (AIHealth <= 0f)
-                EnemyDead();
+                PlayerDead();
         }
         else
         {
-            EnemyDead();
+            PlayerDead();
         }
     }
 
-    public void EnemyDead()
+    public void PlayerDead()
     {
         Destroy(gameObject);
     }

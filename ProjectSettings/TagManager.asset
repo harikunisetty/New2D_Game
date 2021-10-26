@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Run
   - Bullet
+  - AIBossEnemy
+  - AiBullet
   layers:
   - Default
   - TransparentFX
