@@ -45,6 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevelIndex: 1
   nextLevelName: Sucess
-  levelObjective: {fileID: 0}
-  playerController: {fileID: 0}
-  player: {fileID: 0}
+  levelObjective: {fileID: 2851940063070135243, guid: 7ea24d2657aba2d47b28c00dfd553903, type: 3}
+  playerController: {fileID: 8870972135484223090, guid: ab72ad8a1e3df30459d5c4b7381d4b2a, type: 3}
+  player: {fileID: 2251719003937643440, guid: ab72ad8a1e3df30459d5c4b7381d4b2a, type: 3}

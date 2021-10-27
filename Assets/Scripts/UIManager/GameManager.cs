@@ -24,21 +24,28 @@ public class GameManager : MonoBehaviour
     public void Awake()
     {
         if (Instance != null)
+        {
             DestroyImmediate(gameObject);
+        }
         else
+        {
             Instance = this;
-    }
+        }
+    }  
     public void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerController = player.GetComponent<PlayerMovement>();
+      player = GameObject.FindGameObjectWithTag("Player");
 
-        levelObjective =Object.FindObjectOfType<LevelObject>();
+      playerController = player.GetComponent<PlayerMovement>();
+        
+      levelObjective =Object.FindObjectOfType<LevelObject>();
     }
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "MainUI")
+        if(SceneManager.GetActiveScene().name =="MainMenu")
+        {
             return;
+        }
         if (levelObjective != null && levelObjective.IsObjectiveCompleted)
         {
             LevelEnded();

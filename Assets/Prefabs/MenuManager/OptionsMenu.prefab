@@ -125,7 +125,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6400750619745947869}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: volumeController
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2665817338437574793
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,9 +604,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7837829185487288941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15f4abfc2902efc46bd60475c404cb16, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c017b0612e9c3849b7b25899df08cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 914435228850644773}
+  vibrations: 0
+  vibrationsText: {fileID: 1425679402998772519}
+  dataManager: {fileID: 0}
 --- !u!1 &7837829185525333469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1076,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7837829186010376472}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6400750619745947869}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: volumeController
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7837829186164097169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,7 +1631,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7837829186684185014}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6400750619745947869}
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: Vibrations
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7837829186831859931
 GameObject:
   m_ObjectHideFlags: 0

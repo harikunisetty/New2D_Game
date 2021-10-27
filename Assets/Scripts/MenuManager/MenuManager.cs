@@ -7,8 +7,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] MainMenu mainMenuPrefab;
     [SerializeField] OptionsMenu optionMenuPrefab;
     [SerializeField] AboutMenu aboutMenuPrefabs;
-    /*[SerializeField] GameMenu gameMenuPrefabs;
-    [SerializeField] PauseMenu pauseMenuPrefabs;*/
+    [SerializeField] GameMenu gameMenuPrefabs;
+    [SerializeField] PauseMenu pauseMenuPrefabs;
     [SerializeField] Transform menuParentObj;
 
     [Header("Stack")]
@@ -51,7 +51,7 @@ public class MenuManager : MonoBehaviour
 
         DontDestroyOnLoad(menuParentObj);
 
-        Menu[] menusPrefabs = { mainMenuPrefab,optionMenuPrefab, aboutMenuPrefabs};
+        Menu[] menusPrefabs = { mainMenuPrefab,optionMenuPrefab, aboutMenuPrefabs,gameMenuPrefabs,pauseMenuPrefabs};
 
         foreach (Menu menuPrefab in menusPrefabs)
         {

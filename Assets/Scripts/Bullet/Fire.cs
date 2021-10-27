@@ -25,7 +25,8 @@ public class Fire : MonoBehaviour
             Destroy(other.gameObject);
             gameObject.SetActive(false);
             GameManager.Instance.UpdateKills();
-          
+            Instantiate(Effect, transform.position, Quaternion.identity);
+
 
             Debug.Log("Touch Enemy");
         }

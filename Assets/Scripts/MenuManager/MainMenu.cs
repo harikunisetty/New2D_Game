@@ -6,10 +6,11 @@ public class MainMenu : Menu<MainMenu>
 {
     public void PlayButton()
     {
-        if (GameManager.Instance != null)
+        if(GameManager.Instance != null)
         {
             GameManager.Instance.LoadNextLevel();
         }
+        GameMenu.Open();
     }
 
     public void SettingButton()

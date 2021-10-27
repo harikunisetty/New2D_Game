@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7837829185054106566}
   - component: {fileID: 7837829185054106567}
   m_Layer: 5
-  m_Name: About
+  m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,9 +121,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4921128199598070854}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: CreditButton
+      - m_Target: {fileID: 5439349341215203203}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -145,9 +145,9 @@ GameObject:
   - component: {fileID: 7837829185487288930}
   - component: {fileID: 7837829185487288931}
   - component: {fileID: 7837829185487288940}
-  - component: {fileID: 4921128199598070854}
+  - component: {fileID: 5439349341215203203}
   m_Layer: 5
-  m_Name: MainMenuCanvas
+  m_Name: Pause Menu Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &4921128199598070854
+--- !u!114 &5439349341215203203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,9 +243,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7837829185487288941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d6ab4ba86fcca4f93aba175d07ae4d, type: 3}
+  m_Script: {fileID: 11500000, guid: ec64821920ce51242ba1900150e8e681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuBuildIndex: 1
 --- !u!1 &7837829185525333469
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +393,7 @@ GameObject:
   - component: {fileID: 7837829185571874121}
   - component: {fileID: 7837829185571874122}
   m_Layer: 5
-  m_Name: MainmenuPanel
+  m_Name: Pause Menu Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -468,7 +469,7 @@ GameObject:
   - component: {fileID: 7837829185599707300}
   - component: {fileID: 7837829185599707301}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -521,7 +522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MainMenu
+  m_text: Pause
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e58879e9e4c07e84ca1258f64371eb24, type: 2}
   m_sharedMaterial: {fileID: -6375216852801570906, guid: e58879e9e4c07e84ca1258f64371eb24, type: 2}
@@ -655,7 +656,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: About
+  m_text: MainMenu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84eb206dd388d6d408972626fe2fdb55, type: 2}
   m_sharedMaterial: {fileID: -7579387871767764725, guid: 84eb206dd388d6d408972626fe2fdb55, type: 2}
@@ -737,7 +738,7 @@ GameObject:
   - component: {fileID: 7837829186010376472}
   - component: {fileID: 7837829186010376473}
   m_Layer: 5
-  m_Name: Play
+  m_Name: Resume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -845,9 +846,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4921128199598070854}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayButton
+      - m_Target: {fileID: 5439349341215203203}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -998,7 +999,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Resume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84eb206dd388d6d408972626fe2fdb55, type: 2}
   m_sharedMaterial: {fileID: -7579387871767764725, guid: 84eb206dd388d6d408972626fe2fdb55, type: 2}
@@ -1209,7 +1210,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: OPTIONS
+  m_text: Restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 84eb206dd388d6d408972626fe2fdb55, type: 2}
   m_sharedMaterial: {fileID: -7579387871767764725, guid: 84eb206dd388d6d408972626fe2fdb55, type: 2}
@@ -1291,7 +1292,7 @@ GameObject:
   - component: {fileID: 7837829186684185014}
   - component: {fileID: 7837829186684185015}
   m_Layer: 5
-  m_Name: Settings
+  m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1399,9 +1400,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4921128199598070854}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: SettingButton
+      - m_Target: {fileID: 5439349341215203203}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1636,8 +1637,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4921128199598070854}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 5439349341215203203}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: BackButton
         m_Mode: 1
         m_Arguments:
