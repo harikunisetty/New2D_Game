@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d7707068dfd7f4ea1be19dd18c4a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5753012459727061093, guid: 7bfd27bacf74bf641aeedfb6db41e919, type: 3}
+  player: {fileID: 2251719003937643440, guid: ab72ad8a1e3df30459d5c4b7381d4b2a, type: 3}
   lifeTime: 2
   effect: {fileID: 9120245931143102764, guid: 13174a71b5948b347ba1428cea563445, type: 3}
   speed: 20

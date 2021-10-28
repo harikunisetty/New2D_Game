@@ -35,7 +35,7 @@ public class AIBossMovement : MonoBehaviour
     }
     private void Update()
     {
-        distanceFormPlayer = Vector2.Distance(Player.position, transform.position);
+        /*distanceFormPlayer = Vector2.Distance(Player.position, transform.position);*/
 
         if (distanceFormPlayer <= ShootRange)
             {
