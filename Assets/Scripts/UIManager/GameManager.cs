@@ -34,9 +34,10 @@ public class GameManager : MonoBehaviour
     }  
     public void Start()
     {
-      player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
 
-      playerController = player.GetComponent<PlayerMovement>();
+        if(player != null)
+            playerController = player.GetComponent<PlayerMovement>();
         
       levelObjective =Object.FindObjectOfType<LevelObject>();
     }
